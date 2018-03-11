@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+    <% include ./layout%>
+
+</head>
+<body>
+<div class="container">
+
+    <div class="page-header text-center">
+        <h1><span class="fa fa-anchor"></span> Profile Page</h1>
+        <a href="/logout" class="btn btn-default btn-sm">Logout</a>
+    </div>
+    <div id="chat">
+        <div id="chat-window">
+            <div id="output"></div>
+            <div id="feedback"></div>
+        </div>
+        <input id="handle" type="text" placeholder="Username" />
+        <input id="message" type="text" placeholder="Message" />
+        <button id="send">Send</button>
+    </div>
+
+
+</div>
+</body>
+<!--PASAGDAI SA NI KAY DI MUGANA BSTA EXTERNAL AKO PAG GAMIT SA PAG ADD SA JAVASCRIPT AMBOT NGANO POTA-->
+<script src="chatEvents.js"></script>
+</html>
+<!--LOCAL INFORMATION
+<div class="col-sm-6">
+    <div class="well">
+        <h3><span class="fa fa-user"></span> Local</h3>
+
+        <% if (user.local.email) { %>
+            <p>
+                <strong>id</strong>: <%= user._id %><br>
+                <strong>email</strong>: <%= user.local.email %><br>
+                <strong>password</strong>: <%= user.local.password %>
+            </p>
+
+            <a href="/unlink/local" class="btn btn-default">Unlink</a>
+        <% } else { %>
+            <a href="/connect/local" class="btn btn-default">Connect Local</a>
+        <% } %>
+
+    </div>
+</div>
